@@ -1,0 +1,70 @@
+{
+  "menu": [
+    {
+      "label": "Меню",
+      "items": [
+        { "href": "#", "icon": "offers", "label": "Оферты" },
+        { "href": "#", "icon": "secondarymarket", "label": "Вторичный рынок" },
+        { "href": "#", "icon": "portfolio", "label": "Портфель" },
+        { "href": "#", "icon": "payments", "label": "Платежи" }
+      ]
+    },
+    {
+      "label": "Аккаунт",
+      "items": [
+        { "href": "#", "icon": "support", "label": "Поддержка" },
+        { "href": "#", "icon": "profile", "label": "Профиль" }
+      ]
+    }
+  ],
+  "iconsSprite": [
+    {
+      "name": "arrowright-o"
+    },
+    {
+      "name": "angleleft"
+    },
+    {
+      "name": "chat"
+    },
+    {
+      "name": "logout"
+    },
+    {
+      "name": "telegram"
+    },
+    {
+      "name": "offers"
+    },
+    {
+      "name": "secondarymarket"
+    },
+    {
+      "name": "portfolio"
+    },
+    {
+      "name": "payments"
+    },
+    {
+      "name": "analytics"
+    },
+    {
+      "name": "support"
+    },
+    {
+      "name": "profile"
+    },
+    {
+      "name": "plus"
+    }
+  ],
+  "buttonTypes": ["liner", "filled", "unbordered"],
+  "styles": ["primary", "secondary", "action-red", "grey", "primary"],
+  "disStates": [false, true],
+  "sizes": [
+    { "small": false, "extrasmall": false },
+    { "small": true, "extrasmall": false },
+    { "small": false, "extrasmall": true }
+  ],
+  "icons": [{ "icon": false }, { "icon": "arrowright-o" }]
+}

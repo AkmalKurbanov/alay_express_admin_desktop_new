@@ -1,0 +1,24 @@
+{
+	"Кнопка lender": {
+		"prefix": "bt",
+		"body": [
+			"+button(",
+			"  {",
+			"    txt: '$1Инвестировать',",
+			"    type: 'filled или liner или unbordered',",
+			"    small: false,",
+			"    extrasmall: false,",
+			"    stl: 'primary',",
+			"    icon: 'arrowright-o',",
+			"    dis: false,",
+			"    tag: 'button',",
+			"    link: '#',",
+			"    cls: ''",
+			"  })"
+		],
+		"description": "Кнопка lender"
+	}
+}
+
+
+

@@ -1,0 +1,10 @@
+{
+	"Тени lender": {
+		"scope": "sass",
+		"prefix": "shad",
+		"body": [
+			"@include box-shadow('$1')"
+		],
+		"description": "Тени lender"
+	}
+}

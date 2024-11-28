@@ -1,0 +1,52 @@
+
+mixin button({type = 'filled', small = false, extrasmall = false, stl = 'primary', txt = '', icon = '', cls = '', dis = false, tag = 'button', link = '#', action = 'button'})
+  
+  if type === 'filled' || type === 'action'
+    - var btnClass = `btn btn_${type} btn_filled-${stl} ${cls}`
+  else if type === 'liner' || type === 'action'
+    - var btnClass = `btn btn_${type}-${stl} ${cls}`
+  else if type === 'unbordered' || type === 'action'
+    - var btnClass = `btn btn_${type} btn_liner-${stl} ${cls}`
+  else if type === 'default' || type === 'action'
+    - var btnClass = `btn btn_${type} ${cls}`
+
+  
+  if small && (type === 'filled' || type === 'action')
+    - var btnClass = `btn btn_sm btn_${type} btn_filled-${stl} ${cls}`
+  if small && (type === 'liner' || type === 'action')
+    - var btnClass = `btn btn_sm btn_${type}-${stl} ${cls}`
+  if small && (type === 'unbordered' || type === 'action')
+    - var btnClass = `btn btn_sm btn_unbordered btn_liner-${stl} ${cls}`
+  if small && (type === 'default' || type === 'action')
+    - var btnClass = `btn btn_sm btn_${type} ${cls}`
+
+  
+  if extrasmall
+    - btnClass += ' btn_xs'
+
+  - var iconHref = icon ? `sprite.svg#${icon}` : ''
+
+  
+  if tag === 'a'
+    a(class=btnClass href=link disabled=dis)
+      | #{txt}
+      if icon
+        .icon
+          svg
+            use(xlink:href=iconHref)
+
+  else if tag === 'button'
+    button(type=action class=btnClass disabled=dis)
+      | #{txt}
+      if icon
+        .icon
+          svg
+            use(xlink:href=iconHref)
+
+  else
+    #{tag}(class=btnClass disabled=dis)
+      | #{txt}
+      if icon
+        .icon
+          svg
+            use(xlink:href=iconHref)

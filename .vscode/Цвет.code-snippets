@@ -1,0 +1,10 @@
+{
+	"Цвет lender": {
+		"scope": "sass",
+		"prefix": "col",
+		"body": [
+			"map-get(map-get(\\$color-palette, $1), $2)",
+		],
+		"description": "Цвет lender"
+	}
+}

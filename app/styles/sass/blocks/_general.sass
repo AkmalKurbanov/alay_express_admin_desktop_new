@@ -1,0 +1,87 @@
+*
+  margin: 0
+
+html,
+body
+  height: 100%
+  position: relative
+  background: #F8F7FA
+
+.wrapper
+  display: flex
+  flex-direction: row
+  min-height: 100%
+
+  .sidebar
+    position: sticky
+    top: 0    
+
+  .content-wrap
+    display: flex
+    flex-direction: column
+    min-height: 100%
+    flex: 1
+    flex-grow: 1
+    min-width: 0
+
+    .content
+      flex: 1 0 auto
+      flex-grow: 1
+      width: 100%
+      margin: auto
+      padding: rem(15) rem(26)
+      box-sizing: border-box
+
+      .content-inner
+        border-radius: rem(6)
+        padding: rem(24)
+        background-color: white
+        margin-bottom: rem(40)
+        
+        &:last-child
+          margin-bottom: 0
+        
+
+
+.container
+  width: 100%
+  padding-right: rem(16px)
+  padding-left: rem(16px)
+  margin-right: auto
+  margin-left: auto
+  max-width: rem(1126)
+  position: relative
+  box-sizing: border-box
+
+  @include lg
+    max-width: rem(960px)
+
+  @include md
+    max-width: rem(720px)
+
+  @include sm
+    max-width: rem(540px)
+
+  @include xs
+    max-width: 100%
+
+
+.separate-element
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  position: relative
+  margin: rem(32) 0
+
+  &:before
+    position: absolute
+    content: ''
+    width: 100%
+    height: rem(1)
+  
+  span
+    display: inline-block
+    padding: 0 rem(20)
+    font-size: rem(14)
+    z-index: 2

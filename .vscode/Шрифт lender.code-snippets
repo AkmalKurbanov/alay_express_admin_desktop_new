@@ -1,0 +1,10 @@
+{
+	"Шрифт lender": {
+		"scope": "sass",
+		"prefix": "fz",
+		"body": [
+			"@extend .text-sm .caption-sm"
+		],
+		"description": "Шрифт lender"
+	}
+}

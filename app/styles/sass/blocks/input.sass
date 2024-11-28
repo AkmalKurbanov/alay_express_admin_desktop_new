@@ -1,0 +1,103 @@
+.input-wrap
+  width: 100%
+  margin-bottom: rem(20)
+
+  &:last-child
+    margin-bottom: 0
+
+  .input
+    position: relative
+
+    &__label
+      color: #50504D
+      display: inline-block
+      margin-bottom: rem(4)
+      cursor: pointer
+
+    &__field
+      height: rem(38)
+      border: rem(1) solid rgba(219, 218, 222, 1)
+      background: white
+      border-radius: rem(6)
+      display: block
+      width: 100%
+      color: #A18B88
+      padding: 0 rem(14)
+      font-size: rem(15)
+      box-sizing: border-box
+
+    &__pass
+      position: relative
+
+      .input__field
+        padding-right: rem(52)
+
+    &__show-pass
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: rem(14)
+      cursor: pointer
+      display: flex
+      align-items: center
+      justify-content: center
+
+      &:before
+        position: absolute
+        content: ''
+        width: 100%
+        height: rem(3)
+        background-color: #CFCFCF
+        transform: rotate(45deg)
+
+      &.active
+        &::before
+          opacity: 0
+
+.check
+  display: flex
+  align-items: center
+
+  &__box
+    max-width: rem(14)
+    min-width: rem(14)
+    max-height: rem(14)
+    min-height: rem(14)
+    border-radius: rem(4)
+    border: 2px solid #B7B5BE
+    cursor: pointer
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    
+    svg
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+    input
+      opacity: 0
+      cursor: pointer
+      width: rem(14)
+      height: rem(14)
+      
+      &:checked
+        ~ span
+          opacity: 1
+          
+
+    span
+      opacity: 0
+      svg
+        pointer-events: none
+
+
+  &__label
+    color: #37474F
+    font-size: rem(15)
+    line-height: rem(22)
+    display: inline-block
+    margin-left: rem(6)
+    cursor: pointer

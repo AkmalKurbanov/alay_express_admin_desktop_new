@@ -1,0 +1,28 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | main
+block main
+  .wrapper
+    include includes/sidebar
+    .content-wrap
+      .content
+        include includes/search
+
+        .content-inner
+
+        
+
+
+      include includes/footer
+        
+
+  include includes/scripts

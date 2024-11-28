@@ -1,0 +1,37 @@
+$shadow-palettes: (
+  white: (
+    shadow: 4px 8px 36px rgba(22, 22, 22, 0.06),
+  ),
+  primary: (
+    shadow: 0px 4px 16px rgba(133, 123, 251, 0.32),
+  ),
+  secondary: (
+    shadow: 4px 8px 16px rgba(93, 188, 18, 0.32),
+  ),
+  info: (
+    shadow: 4px 8px 12px rgba(104, 96, 204, 0.14),
+  ),
+  action-red: (
+    shadow: 4px 8px 16px rgba(255, 0, 0, 0.16),
+  ),
+  warning: (
+    shadow: 4px 8px 16px rgba(251, 188, 5, 0.32),
+  ),
+);
+
+
+@mixin box-shadow($color, $default-shadow: none) {
+  @if map-has-key($shadow-palettes, $color) {
+    box-shadow: #{map-get(map-get($shadow-palettes, $color), shadow)};
+  } @else {
+    @warn "Тень для цвета #{$color} не найдена в $shadow-palettes. Применяется значение по умолчанию.";
+    box-shadow: $default-shadow;
+  }
+}
+
+
+@each $color, $properties in $shadow-palettes {
+  .shadow-#{"#{$color}"} { 
+    @include box-shadow($color);
+  }
+}

@@ -1,0 +1,55 @@
+.sidebar
+  background-color: white
+  max-width: rem(260)
+  width: 100%
+  padding: 0 rem(14)
+  box-shadow: 0px 2px 4px rgba(165, 163, 174, 0.3)
+
+  &__logo
+    display: flex
+    align-items: center
+    min-height: rem(70)
+    max-height: rem(70)
+
+  &__section
+    margin-bottom: rem(20)
+    
+
+    &:last-child
+      margin-bottom: 0
+
+    ul
+      padding: 0
+      list-style: none  
+      
+      li
+        &.active
+          a
+            // bacground-color: $accent
+            color: white
+        a
+          padding: rem(9) rem(16)
+          transition: color 0.3s ease, background-color 0.3s ease
+          border-radius: rem(6)
+          font-size: rem(15)
+          color: #3D3D39
+          line-height: rem(22)
+          text-decoration: none
+          display: block
+
+          &:hover
+            // background-color: $accent
+            color: white
+
+
+  &__section-title    
+    text-transform: uppercase
+    color: #9BA3A7
+    font-size: rem(11)
+    margin-bottom: rem(6)
+    padding: 0 rem(16)
+  
+    
+    
+   
+      

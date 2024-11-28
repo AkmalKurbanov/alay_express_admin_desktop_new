@@ -1,0 +1,27 @@
+@mixin icon-size($size)
+  max-width: rem($size)
+  min-width: rem($size)
+  height: rem($size)
+
+@mixin icon-rotate($angle)
+  transform: rotate(#{$angle}deg)
+
+.icon
+  position: relative
+  @include dif-xy-center
+
+  $sizes: 24, 20, 16
+  $angles: 45, -45, 90, -90, 180, -180
+
+  @each $size in $sizes
+    &_w#{$size}
+      @include icon-size($size)
+
+  @each $angle in $angles
+    &_#{$angle}deg
+      @include icon-rotate($angle)
+
+  svg
+    width: 100%
+    height: 100%
+    position: absolute
