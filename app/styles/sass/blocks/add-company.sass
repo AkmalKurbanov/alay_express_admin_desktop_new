@@ -1,0 +1,88 @@
+.add-company-flex, 
+.added-company-flex 
+  display: flex
+  flex-wrap: wrap
+  margin-left: rem(-12)
+  margin-right: rem(-12)
+
+  .add-company-wrap,
+  .added-company-wrap
+    padding: rem(24) rem(12)
+    box-sizing: border-box
+
+    &_w50
+      width: 50%
+
+.add-company
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  border: rem(2) dashed #DBDADE
+  border-radius: rem(6)
+  padding: rem(45) rem(15)
+  
+  &__icon
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #D6EEEC
+    width: rem(30)
+    height: rem(30)
+    border-radius: rem(6)
+    margin-right: rem(14)
+
+    .icon
+      min-width: rem(16)
+      max-width: rem(16)
+      min-height: rem(16)
+      max-height: rem(16)
+
+  p
+    color: #3D3D39
+    font-size: rem(15)
+    line-height: rem(22)
+    font-weight: 600
+
+.added-company
+  background-color: #F8F7FA
+  border-radius: rem(6)
+  padding: rem(16)
+  box-sizing: border-box
+
+  &__name 
+    color: #3D3D39
+    font-size: rem(18)
+    line-height: rem(24)
+    font-weight: 600
+    margin-bottom: rem(8)
+
+  &__desc 
+    color: #717171
+    font-size: rem(16)
+    line-height: rem(20)
+    font-weight: 500   
+    margin-bottom: rem(16)
+
+  &__active
+    display: flex
+    align-items: center
+
+    input
+      width: rem(18)
+      height: rem(18)
+      color: #009688
+      cursor: pointer
+    
+    label
+      color: #3D3D39
+      font-size: rem(14)
+      line-height: rem(18)
+      font-weight: 500  
+      margin-left: rem(10)
+      cursor: pointer
+
+  &.active
+    background-color: #F0F8CF    
+
+    

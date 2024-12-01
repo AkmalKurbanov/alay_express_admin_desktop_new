@@ -1,0 +1,47 @@
+.profile
+  &__img-settitngs-wrap
+    margin-top: rem(16)
+    display: flex
+    align-items: center
+
+
+  &__img  
+    min-width: rem(100)
+    max-width: rem(100)
+    min-height: rem(100)
+    max-height: rem(100)
+    position: relative
+    border-radius: rem(6)
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-right: rem(26)
+
+    img
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      object-fit: cover
+
+  &__img-settitngs
+    display: inline-flex
+    align-items: flex-start
+
+    .btn
+      position: relative
+      margin-right: rem(16)
+      
+      &:last-child
+        margin-right: 0
+
+      input
+        opacity: 0
+        width: 100%
+        height: 100%
+        position: absolute
+        cursor: pointer

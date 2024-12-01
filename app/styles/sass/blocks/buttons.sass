@@ -1,29 +1,53 @@
 .btn
   border-radius: rem(6)
-  display: flex
+  display: inline-flex
   align-items: center
   justify-content: center
   color: white
   font-size: rem(16)
-  font-weight: 700
+  font-weight: 500
   cursor: pointer
   text-decoration: none
   outline: none
   border: none
-  width: 100%
+  transition: background-color .3s ease
+  padding: 0 rem(20)
+  text-align: center
 
   &_lg
     height: rem(52)
+
+  &_sm
+    height: rem(38)
   
   &_blue
     background-color: #4285F4
     
+    &:hover
+      background-color: #367AEC  
+      
     span
       color: #9E9E9E
       background-color: #F8F7FA
 
   &_accent
-    background-color: #009688    
+    background-color: #009688   
+
+    &:hover
+      background-color: #007368  
+
+  &_danger
+    background-color: #EA5455
+    
+    &:hover
+      background-color: #D4494A
+
+
+
+  &_default
+    background-color: #A8AAAE29
+    pointer-events: none
+    color: #A8AAAE
 
   svg
     margin-right: rem(18)  

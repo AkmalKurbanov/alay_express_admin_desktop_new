@@ -1,0 +1,327 @@
+.input-flex
+  margin-left: rem(-12)
+  margin-right: rem(-12)
+  display: flex
+  flex-wrap: wrap
+  align-items: stretch
+  
+  .input-wrap
+    margin-bottom: 0
+
+    &_modify
+      padding-top: 0
+      padding-bottom: 0
+      position: relative
+      display: flex
+      flex-direction: column
+
+      .input-wrap
+        padding: rem(12) 0
+        flex-grow: 1
+        display: flex
+        flex-direction: column
+
+        .input  
+          flex-grow: 1
+          display: flex
+          flex-direction: column
+
+          .input__field-wrap
+            flex-grow: 1
+
+            .input__field
+              height: 100%
+
+
+
+        &:last-child
+          padding-bottom: 0
+
+  
+.input-wrap
+  width: 100%
+  margin-bottom: rem(20)
+  box-sizing: border-box
+
+  &:last-child
+    margin-bottom: 0
+
+  &_w50
+    width: 50%
+    padding: rem(12)  
+
+
+
+  .input
+    position: relative
+
+    &__label
+      color: #50504D
+      display: inline-block
+      margin-bottom: rem(4)
+      cursor: pointer
+      span
+        color: #EA1313
+
+    &__field-wrap
+      position: relative
+
+
+
+
+      &.success
+
+        .input__field
+          border-color: green
+
+        .input__field-message
+          top: 100%
+          color: green
+          opacity: 1
+
+      &.error
+        color: #EA1313
+        opacity: 1
+        top: 100%
+        
+        .input__field
+          border-color: #EA1313
+
+        .input__field-message
+          top: 100%
+          color: red
+          opacity: 1
+      
+   
+
+    &__field
+      min-height: rem(38)
+      border: rem(1) solid rgba(219, 218, 222, 1)
+      background: white
+      border-radius: rem(6)
+      display: block
+      width: 100%
+      color: #A18B88
+      padding: rem(5) rem(14)
+      font-size: rem(15)
+      box-sizing: border-box
+      resize: none
+
+      
+      &:focus-visible
+        outline: none
+
+      &:placeholder
+        color: #B7B5BE
+
+
+
+    &__field-message
+      position: absolute
+      top: calc(100% - 10px) 
+      font-size: rem(12)
+      transition: opacity .3s ease, top .3s ease
+      opacity: 0    
+
+    .output-success,
+    .output-error
+      padding: 0 rem(5)
+      font-size: rem(11)  
+      color: white
+      display: inline-flex
+      border-radius: rem(3)
+      position: absolute
+      top: 100%
+      left: 0
+      opacity: 0
+      transition: opacity .3s ease, top .3s ease
+      z-index: 1
+
+    .output-success
+      background-color: green
+
+    .output-error
+      background-color: red
+      
+
+    &__pass
+      position: relative
+
+      .input__field
+        padding-right: rem(52)
+
+    &__show-pass
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: rem(14)
+      cursor: pointer
+      display: flex
+      align-items: center
+      justify-content: center
+
+      &:before
+        position: absolute
+        content: ''
+        width: 100%
+        height: rem(3)
+        background-color: #CFCFCF
+        transform: rotate(45deg)
+        opacity: 0
+
+      &.active
+        &::before
+          opacity: 1
+
+    &_phone
+      position: relative
+
+      &.error
+        .input__field
+          border-color: red
+
+        .output-error
+          opacity: 1
+          top: calc( 100% + 5px )
+  
+
+      &.success
+        .input__field
+          border-color: green
+
+        .output-success
+          opacity: 1
+          top: calc( 100% + 5px )
+
+.check
+  display: flex
+  align-items: center
+
+  &__box
+    max-width: rem(14)
+    min-width: rem(14)
+    max-height: rem(14)
+    min-height: rem(14)
+    border-radius: rem(4)
+    border: 2px solid #B7B5BE
+    cursor: pointer
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+
+    svg
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+    input
+      opacity: 0
+      cursor: pointer
+      width: rem(14)
+      height: rem(14)
+
+      &:checked
+        ~ span
+          opacity: 1
+
+    span
+      opacity: 0
+      svg
+        pointer-events: none
+
+  &__label
+    color: #37474F
+    font-size: rem(15)
+    line-height: rem(22)
+    display: inline-block
+    margin-left: rem(6)
+    cursor: pointer
+
+.select
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  border-radius: rem(6)
+  border: 1px solid #DBDADE
+  background-color: white
+  height: rem(36)
+  padding: 0 rem(14)
+  cursor: pointer
+
+  &__selected,
+  &__option
+    color: #4B465C
+    font-size: rem(15)
+    line-height: rem(24)
+    box-sizing: border-box
+    cursor: pointer
+  
+  &__selected
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__round-element
+    border-radius: 100%
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    min-width: rem(24)
+    max-width: rem(24)
+    min-height: rem(24)
+    max-height: rem(24)
+    margin-right: rem(12) 
+
+    img
+      width: 100%
+      height: 100%
+
+  &__trigger
+    max-width: rem(20)
+    min-width: rem(20)
+    max-height: rem(20)
+    min-height: rem(20)
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+
+  &__dropdown
+    position: absolute
+    width: 100%
+    opacity: 0
+    top: 0
+    right: 0
+    left: -1px
+    transition: top .3s ease, opacity .3s ease
+    pointer-events: none
+    background-color: white
+    border-radius: rem(6)
+    border: 1px solid #DBDADE
+    z-index: 2
+    overflow: hidden
+
+    &.active
+      opacity: 1  
+      top: calc( 100%  + 10px )
+      pointer-events: inherit
+  
+  &__option
+    display: flex
+    align-items: center
+    padding: rem(2.5) rem(14)
+    cursor: pointer
+    transition: background-color .3s ease
+    
+    &:hover
+      background-color: #F8F7FA
+      
+
+
+
+.iti.iti--allow-dropdown
+  width: 100%    

@@ -44,7 +44,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "intl-tel-input": "^17.0.19",
+    "intl-tel-input": "17.0.8",
     "jquery": "^3.6.2",
     "jquery-lazy": "^1.7.11",
     "normalize.css": "^8.0.1",

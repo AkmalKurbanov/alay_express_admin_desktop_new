@@ -1,0 +1,292 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Profile
+block main
+  .wrapper
+    include includes/sidebar
+    .content-wrap
+      .content
+        include includes/search
+        
+
+        .tab-btns 
+          .tab-btns__btn.active
+
+            .icon
+              svg
+                use(xlink:href='sprite.svg#users')
+            | Личные данные 
+          
+          .tab-btns__btn 
+            .icon
+              svg
+                use(xlink:href='sprite.svg#mapmark')
+            | Мои адреса 
+          
+          .tab-btns__btn
+            .icon
+              svg
+                use(xlink:href='sprite.svg#lock')
+            | Защита
+
+
+        .content-inner
+          .section.section_separate
+            h2 Детали профиля
+
+            .profile 
+              .profile__img-settitngs-wrap 
+                .profile__img 
+                  img(src="images/dist/avatar.jpg", alt="") 
+
+                form(action="").profile__img-settitngs
+                  .btn.btn_sm.btn_accent
+                    input(type="file")  
+                    | Изменить
+
+                  .btn.btn_sm.btn_default Удалить
+
+          .section
+            .warning-message
+              .icon
+                svg
+                  use(xlink:href='sprite.svg#attention') 
+              p Заполните личные данные, адрес доставки и документы, чтобы начать пользоваться нашими сервисами!    
+
+          .section
+            h3 Личные данные
+
+            .input-flex
+              .input-wrap.input-wrap_w50
+                .input
+                  label(for="name").input__label Имя 
+                    span *
+
+                .input__field-wrap
+                  input(type="text" id="name").input__field  
+
+              .input-wrap.input-wrap_w50
+                .input
+                  label(for="surname").input__label Фамилия
+                    span *
+
+                .input__field-wrap
+                  input(type="text" id="surname").input__field  
+
+              .input-wrap.input-wrap_w50
+                .input-wrap
+                  .input.input_phone
+                    label(for='phone').input__label Номер телефона
+                    .input__field-wrap
+                      input.input__field.phone-js(name="phone" type="tel")
+                      .output-success Номер действительный! 
+                      .output-error Неверный номер. Повторите попытку.
+
+              .input-wrap.input-wrap_w50
+                .input-wrap
+                  .input
+                    label(for="email").input__label Email *
+
+                  .input__field-wrap
+                    input(type="text" id="email").input__field  
+
+              .input-wrap.input-wrap_w50
+                .input-wrap
+                  .input
+                    .input__label Страна проживания * 
+
+                    .select.select-trigger-js 
+                      .select__selected
+                        .select__round-element 
+                          img(src="", alt="")
+                        span Кыргызстан 
+                      
+                      .select__trigger
+                        svg(xmlns="http://www.w3.org/2000/svg", width="20", height="20", viewBox="0 0 20 20", fill="none")
+                          path(d="M5 7.5L10 12.5L15 7.5", stroke="#A8AAAE", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
+
+
+                      .select__dropdown 
+                        .select__option
+                          .select__round-element 
+                            img(src="", alt="")
+                          | Кыргызстан
+                        .select__option
+                          .select__round-element 
+                            img(src="", alt="")
+                          | Росиия
+                        .select__option
+                          .select__round-element 
+                            img(src="", alt="")
+                          | Австрия
+
+              .input-wrap.input-wrap_w50
+                .input-wrap
+                  .input
+                    label(for="inn").input__label ИНН
+                      span *
+
+                  .input__field-wrap
+                    input(type="text" id="inn").input__field  
+
+          .section.section_separate           
+            h3 Документы
+
+            .input-flex
+              .input-wrap.input-wrap_w50
+                .input
+                  label(for="name-en").input__label Имя на английском 
+                    span *
+
+                .input__field-wrap
+                  input(type="text" id="name-en").input__field 
+
+              .input-wrap.input-wrap_w50
+                .input
+                  label(for="surname-en").input__label Фамилия на английском 
+                    span *
+
+                .input__field-wrap
+                  input(type="text" id="surname-en").input__field 
+
+              .input-wrap.input-wrap_w50
+                .input-wrap
+                  .input
+                    .input__label Гражданство
+                      span * 
+
+                    .select.select-trigger-js 
+                      .select__selected
+                        .select__round-element 
+                          img(src="", alt="")
+                        span Кыргызстан 
+                      
+                      .select__trigger
+                        svg(xmlns="http://www.w3.org/2000/svg", width="20", height="20", viewBox="0 0 20 20", fill="none")
+                          path(d="M5 7.5L10 12.5L15 7.5", stroke="#A8AAAE", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
+
+
+                      .select__dropdown 
+                        .select__option
+                          .select__round-element 
+                            img(src="", alt="")
+                          | Кыргызстан
+                        .select__option
+                          .select__round-element 
+                            img(src="", alt="")
+                          | Росиия
+                        .select__option
+                          .select__round-element 
+                            img(src="", alt="")
+                          | Австрия    
+
+              .input-wrap.input-wrap_w50
+                .input-wrap
+                  .input
+                    .input__label Тип документа
+                      span * 
+
+                    .select.select-trigger-js 
+                      .select__selected
+                        span ID 
+                      
+                      .select__trigger
+                        svg(xmlns="http://www.w3.org/2000/svg", width="20", height="20", viewBox="0 0 20 20", fill="none")
+                          path(d="M5 7.5L10 12.5L15 7.5", stroke="#A8AAAE", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
+
+
+                      .select__dropdown 
+                        .select__option ID1
+                        .select__option ID2
+
+            .drop-zone-flex
+              .drop-zone-wrap.drop-zone-wrap_w50
+                form(action="#").drop-zone
+                  .drop-zone__icon 
+                    .icon
+                      svg
+                        use(xlink:href='sprite.svg#upload')
+                  p Перетащите файлы сюда или нажмите, чтобы загрузить
+                    span Это всего лишь демонстрационная дропзона.
+                  
+                  
+                  .drop-zone__img
+                    input(type="text")
+                    img(src="", alt="")
+
+                  .controls
+                    button.change-btn.btn_sm.btn.btn_accent Изменить
+                    button.delete-btn.btn_sm.btn.btn_danger Удалить
+
+              .drop-zone-wrap.drop-zone-wrap_w50
+                form(action="#").drop-zone
+                  .drop-zone__icon 
+                    .icon
+                      svg
+                        use(xlink:href='sprite.svg#upload')
+                  p Перетащите файлы сюда или нажмите, чтобы загрузить
+                    span Это всего лишь демонстрационная дропзона.
+                  
+                  
+                  .drop-zone__img
+                    input(type="text")
+                    img(src="", alt="")
+
+                  .controls
+                    button.change-btn.btn_sm.btn.btn_accent Изменить
+                    button.delete-btn.btn_sm.btn.btn_danger Удалить
+
+          form(action="#", class="section section_separate")
+            h3 Комании и проекты
+            .sub-title
+              | Здесь Вы можете добавить компанию/проект. Вы можете выбрать какую компанию использовать для
+              br
+              | выставления счетов по коммерческим партиям, при оформлении посылки или груза.
+            .added-company-flex
+              div(class="added-company-wrap added-company-wrap_w50")
+                .added-company.active
+                  div(class="added-company__name") Проект №1
+                  div(class="added-company__desc") ОсОО “Стрела”
+                  div(class="added-company__active")
+                    input#company1(type="radio", name="company" checked)
+                    label(for="company1") Выбрать по умолчанию для выставления счетов
+              div(class="added-company-wrap added-company-wrap_w50")
+                .added-company
+                  div(class="added-company__name") Проект №2
+                  div(class="added-company__desc") ОсОО “Мишень”
+                  div(class="added-company__active")
+                    input#company2(type="radio", name="company")
+                    label(for="company2") Выбрать по умолчанию для выставления счетов
+
+             
+            .add-company-flex 
+              .add-company-wrap.add-company-wrap_w50
+                .add-company.add-company-js
+                  .add-company__icon 
+                    .icon
+                      svg
+                        use(xlink:href='sprite.svg#plus') 
+
+                  p Добавить компанию      
+
+          .section 
+            .btn.btn_sm.btn_accent Сохранить данные
+
+        include includes/add-company-popup
+              
+
+
+      include includes/footer
+    
+        
+
+  include includes/scripts

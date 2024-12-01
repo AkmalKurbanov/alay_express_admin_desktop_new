@@ -1,0 +1,122 @@
+.add-company-popup 
+  .add-company-popup__wrap 
+    h2 Добавление проекта
+
+    .input-flex
+      .input-wrap.input-wrap_w50
+        .input
+          label(for="project-name").input__label Наименование проекта 
+
+        .input__field-wrap
+          input(type="text" id="project-name" placeholder="Например: Алай Экспресс").input__field  
+
+      .input-wrap.input-wrap_w50
+        .input-wrap
+          .input
+            .input__label Страна проживания * 
+
+            .select.select-trigger-js 
+              .select__selected
+                .select__round-element 
+                  img(src="", alt="")
+                span Кыргызстан 
+              
+              .select__trigger
+                svg(xmlns="http://www.w3.org/2000/svg", width="20", height="20", viewBox="0 0 20 20", fill="none")
+                  path(d="M5 7.5L10 12.5L15 7.5", stroke="#A8AAAE", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
+
+
+              .select__dropdown 
+                .select__option
+                  .select__round-element 
+                    img(src="", alt="")
+                  | Кыргызстан
+                .select__option
+                  .select__round-element 
+                    img(src="", alt="")
+                  | Росиия
+                .select__option
+                  .select__round-element 
+                    img(src="", alt="")
+                  | Австрия
+
+      .input-wrap.input-wrap_w50
+        .input
+          label(for="legal-name").input__label Наименование юридического лица
+
+        .input__field-wrap
+          input(type="text" id="legal-name" placeholder="Например: ОсОО “Стрела”").input__field  
+      
+      .input-wrap.input-wrap_w50
+        .input-wrap
+          .input
+            .input__label Основной адрес доставки
+
+            .select.select-trigger-js 
+              .select__selected
+                span Адрес 1 
+              
+              .select__trigger
+                svg(xmlns="http://www.w3.org/2000/svg", width="20", height="20", viewBox="0 0 20 20", fill="none")
+                  path(d="M5 7.5L10 12.5L15 7.5", stroke="#A8AAAE", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
+
+
+              .select__dropdown 
+                .select__option Адрес 1
+                .select__option Адрес 2
+
+      .input-wrap.input-wrap_w50.input-wrap_modify
+        .input-wrap
+          .input
+            label(for="legal-name").input__label ФИО лица по бух. вопросам
+
+          .input__field-wrap
+            input(type="text" id="legal-name" placeholder="Например: Орешкин Владислав Владимирович").input__field  
+        
+        .input-wrap
+          .input
+            label(for="legal-name").input__label Адрес электронной почты
+
+          .input__field-wrap
+            input(type="text" id="legal-name" placeholder="Например: john@example.com").input__field  
+      
+        .input-wrap
+          .input.input_phone
+            label(for='phone').input__label Телефон контактного лица
+            .input__field-wrap
+              input.input__field.phone-js(name="phone" type="tel")
+              .output-success Номер действительный! 
+              .output-error Неверный номер. Повторите попытку.
+
+
+      .input-wrap.input-wrap_w50.input-wrap_modify
+        .input-wrap
+          .input
+            label(for="legal-name").input__label Реквизиты для счетов
+
+            .input__field-wrap
+              textarea(name="").input__field
+
+
+
+    .drop-zone-flex
+      .drop-zone-wrap
+      
+        form(action="#").drop-zone
+          .drop-zone__icon 
+            .icon
+              svg
+                use(xlink:href='sprite.svg#upload')
+          p Перетащите файлы сюда или нажмите, чтобы загрузить
+            span Это всего лишь демонстрационная дропзона.
+          
+          
+          .drop-zone__img
+            input(type="text")
+            img(src="", alt="")
+
+          .controls
+            button.change-btn.btn_sm.btn.btn_accent Изменить
+            button.delete-btn.btn_sm.btn.btn_danger Удалить
+
+      

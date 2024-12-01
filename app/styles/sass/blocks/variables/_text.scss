@@ -1,8 +1,8 @@
 
 $headings: (
   h1: (fz: rem(36), lh: rem(36), fw: 700),
-  h2: (fz: rem(48), lh: 130%, fw: 600),
-  h3: (fz: rem(36), lh: 130%, fw: 600),
+  h2: (fz: rem(28), lh: rem(28), fw: 700),
+  h3: (fz: rem(20), lh: rem(20), fw: 700),
   h4: (fz: rem(24), lh: 130%, fw: 600),
   h5: (fz: rem(20), lh: 130%, fw: 600)
 );
@@ -45,3 +45,12 @@ $text-styles: (
 
 @include headings($headings);
 @include text($text-styles);
+
+
+
+.sub-title {
+  color: #888687;
+  font-size: rem(15);
+  line-height: rem(22);
+  margin-top: rem(16)
+}

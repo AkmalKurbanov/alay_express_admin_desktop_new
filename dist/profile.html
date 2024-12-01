@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile
+    </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta name="theme-color" content="#005891">
+    <meta name="msapplication-navbutton-color" content="#005891">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#005891">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="sidebar__logo"><img src="images/dist/logo.svg" alt=""></div>
+        <div class="sidebar__section">
+          <div class="sidebar__section-title">ПОСЫЛКИ</div>
+          <ul> 
+            <li class="active"><a href="#">Добавить посылку</a></li>
+            <li><a href="#">Список посылок</a></li>
+            <li><a href="#">Адреса за границей</a></li>
+            <li><a href="#">Калькулятор</a></li>
+          </ul>
+        </div>
+        <div class="sidebar__section">
+          <div class="sidebar__section-title">Сервисы</div>
+          <ul> 
+            <li class="active"><a href="#">Ассистент</a></li>
+            <li><a href="#">Каталог магазинов</a></li>
+          </ul>
+        </div>
+        <div class="sidebar__section">
+          <div class="sidebar__section-title">ДРУГИЕ</div>
+          <ul> 
+            <li class="active"><a href="#">Вопросы и ответы</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-wrap">
+        <div class="content">
+          <div class="search">
+            <label for="search"> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <circle cx="10.8333" cy="10.8333" r="7.58333" stroke="#3D3D39" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></circle>
+                <circle cx="10.8333" cy="10.8333" r="7.58333" stroke="white" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></circle>
+                <path d="M22.75 22.75L16.25 16.25" stroke="#3D3D39" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M22.75 22.75L16.25 16.25" stroke="white" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </label>
+            <input type="text" id="search" placeholder="Введите название магазина или категории товаров например:”Одежда”, “Обувь” ">
+            <div class="profile-controls"> 
+              <div class="profile-controls__item"><a class="profile-controls__notification" href="#"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27" fill="none">
+                    <path d="M10.832 5.91667C10.832 4.72005 11.8021 3.75 12.9987 3.75C14.1953 3.75 15.1654 4.72005 15.1654 5.91667C17.7005 7.11543 19.3672 9.61543 19.4987 12.4167V15.6667C19.664 17.0325 20.4682 18.2387 21.6654 18.9167H4.33203C5.52924 18.2387 6.33337 17.0325 6.4987 15.6667V12.4167C6.63018 9.61543 8.29685 7.11543 10.832 5.91667" stroke="#3D3D39" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.832 5.91667C10.832 4.72005 11.8021 3.75 12.9987 3.75C14.1953 3.75 15.1654 4.72005 15.1654 5.91667C17.7005 7.11543 19.3672 9.61543 19.4987 12.4167V15.6667C19.664 17.0325 20.4682 18.2387 21.6654 18.9167H4.33203C5.52924 18.2387 6.33337 17.0325 6.4987 15.6667V12.4167C6.63018 9.61543 8.29685 7.11543 10.832 5.91667" stroke="white" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9.75 18.916V19.9993C9.75 21.7943 11.2051 23.2493 13 23.2493C14.7949 23.2493 16.25 21.7943 16.25 19.9993V18.916" stroke="#3D3D39" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M9.75 18.916V19.9993C9.75 21.7943 11.2051 23.2493 13 23.2493C14.7949 23.2493 16.25 21.7943 16.25 19.9993V18.916" stroke="white" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg><span>4</span></a></div>
+              <div class="profile-controls__item"> <a class="profile-controls__profile-element" href="#">
+                  <div class="profile-controls__profile-avatar"><img src="images/dist/avatar.webp" alt=""></div></a></div>
+            </div>
+          </div>
+          <div class="tab-btns"> 
+            <div class="tab-btns__btn active">
+              <div class="icon">
+                <svg>
+                  <use xlink:href="sprite.svg#users"></use>
+                </svg>
+              </div>Личные данные 
+            </div>
+            <div class="tab-btns__btn"> 
+              <div class="icon">
+                <svg>
+                  <use xlink:href="sprite.svg#mapmark"></use>
+                </svg>
+              </div>Мои адреса 
+            </div>
+            <div class="tab-btns__btn">
+              <div class="icon">
+                <svg>
+                  <use xlink:href="sprite.svg#lock"></use>
+                </svg>
+              </div>Защита
+            </div>
+          </div>
+          <div class="content-inner">
+            <div class="section section_separate">
+              <h2>Детали профиля</h2>
+              <div class="profile"> 
+                <div class="profile__img-settitngs-wrap"> 
+                  <div class="profile__img"> <img src="images/dist/avatar.jpg" alt=""></div>
+                  <form class="profile__img-settitngs" action="">
+                    <div class="btn btn_sm btn_accent">
+                      <input type="file">Изменить
+                    </div>
+                    <div class="btn btn_sm btn_default">Удалить</div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="warning-message">
+                <div class="icon">
+                  <svg>
+                    <use xlink:href="sprite.svg#attention"> </use>
+                  </svg>
+                </div>
+                <p>Заполните личные данные, адрес доставки и документы, чтобы начать пользоваться нашими сервисами!    </p>
+              </div>
+            </div>
+            <div class="section">
+              <h3>Личные данные</h3>
+              <div class="input-flex">
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input">
+                    <label class="input__label" for="name">Имя <span>*</span></label>
+                  </div>
+                  <div class="input__field-wrap">
+                    <input class="input__field" type="text" id="name">
+                  </div>
+                </div>
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input">
+                    <label class="input__label" for="surname">Фамилия<span>*</span></label>
+                  </div>
+                  <div class="input__field-wrap">
+                    <input class="input__field" type="text" id="surname">
+                  </div>
+                </div>
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input-wrap">
+                    <div class="input input_phone">
+                      <label class="input__label" for="phone">Номер телефона</label>
+                      <div class="input__field-wrap">
+                        <input class="input__field phone-js" name="phone" type="tel">
+                        <div class="output-success">Номер действительный! </div>
+                        <div class="output-error">Неверный номер. Повторите попытку.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input-wrap">
+                    <div class="input">
+                      <label class="input__label" for="email">Email *</label>
+                    </div>
+                    <div class="input__field-wrap">
+                      <input class="input__field" type="text" id="email">
+                    </div>
+                  </div>
+                </div>
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input-wrap">
+                    <div class="input">
+                      <div class="input__label">Страна проживания * </div>
+                      <div class="select select-trigger-js"> 
+                        <div class="select__selected">
+                          <div class="select__round-element"> <img src="" alt=""></div><span>Кыргызстан </span>
+                        </div>
+                        <div class="select__trigger">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#A8AAAE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </div>
+                        <div class="select__dropdown"> 
+                          <div class="select__option">
+                            <div class="select__round-element"> <img src="" alt=""></div>Кыргызстан
+                          </div>
+                          <div class="select__option">
+                            <div class="select__round-element"> <img src="" alt=""></div>Росиия
+                          </div>
+                          <div class="select__option">
+                            <div class="select__round-element"> <img src="" alt=""></div>Австрия
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input-wrap">
+                    <div class="input">
+                      <label class="input__label" for="inn">ИНН<span>*</span></label>
+                    </div>
+                    <div class="input__field-wrap">
+                      <input class="input__field" type="text" id="inn">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section section_separate">          
+              <h3>Документы</h3>
+              <div class="input-flex">
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input">
+                    <label class="input__label" for="name-en">Имя на английском <span>*</span></label>
+                  </div>
+                  <div class="input__field-wrap">
+                    <input class="input__field" type="text" id="name-en">
+                  </div>
+                </div>
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input">
+                    <label class="input__label" for="surname-en">Фамилия на английском <span>*</span></label>
+                  </div>
+                  <div class="input__field-wrap">
+                    <input class="input__field" type="text" id="surname-en">
+                  </div>
+                </div>
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input-wrap">
+                    <div class="input">
+                      <div class="input__label">Гражданство<span>* </span></div>
+                      <div class="select select-trigger-js"> 
+                        <div class="select__selected">
+                          <div class="select__round-element"> <img src="" alt=""></div><span>Кыргызстан </span>
+                        </div>
+                        <div class="select__trigger">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#A8AAAE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </div>
+                        <div class="select__dropdown"> 
+                          <div class="select__option">
+                            <div class="select__round-element"> <img src="" alt=""></div>Кыргызстан
+                          </div>
+                          <div class="select__option">
+                            <div class="select__round-element"> <img src="" alt=""></div>Росиия
+                          </div>
+                          <div class="select__option">
+                            <div class="select__round-element"> <img src="" alt=""></div>Австрия    
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input-wrap">
+                    <div class="input">
+                      <div class="input__label">Тип документа<span>* </span></div>
+                      <div class="select select-trigger-js"> 
+                        <div class="select__selected"><span>ID </span></div>
+                        <div class="select__trigger">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#A8AAAE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </div>
+                        <div class="select__dropdown"> 
+                          <div class="select__option">ID1</div>
+                          <div class="select__option">ID2</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="drop-zone-flex">
+                <div class="drop-zone-wrap drop-zone-wrap_w50">
+                  <form class="drop-zone" action="#">
+                    <div class="drop-zone__icon"> 
+                      <div class="icon">
+                        <svg>
+                          <use xlink:href="sprite.svg#upload"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <p>Перетащите файлы сюда или нажмите, чтобы загрузить<span>Это всего лишь демонстрационная дропзона.</span></p>
+                    <div class="drop-zone__img">
+                      <input type="text"><img src="" alt="">
+                    </div>
+                    <div class="controls">
+                      <button class="change-btn btn_sm btn btn_accent">Изменить</button>
+                      <button class="delete-btn btn_sm btn btn_danger">Удалить</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="drop-zone-wrap drop-zone-wrap_w50">
+                  <form class="drop-zone" action="#">
+                    <div class="drop-zone__icon"> 
+                      <div class="icon">
+                        <svg>
+                          <use xlink:href="sprite.svg#upload"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <p>Перетащите файлы сюда или нажмите, чтобы загрузить<span>Это всего лишь демонстрационная дропзона.</span></p>
+                    <div class="drop-zone__img">
+                      <input type="text"><img src="" alt="">
+                    </div>
+                    <div class="controls">
+                      <button class="change-btn btn_sm btn btn_accent">Изменить</button>
+                      <button class="delete-btn btn_sm btn btn_danger">Удалить</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <form class="section section_separate" action="#">
+              <h3>Комании и проекты</h3>
+              <div class="sub-title">Здесь Вы можете добавить компанию/проект. Вы можете выбрать какую компанию использовать для<br>выставления счетов по коммерческим партиям, при оформлении посылки или груза.</div>
+              <div class="added-company-flex">
+                <div class="added-company-wrap added-company-wrap_w50">
+                  <div class="added-company active">
+                    <div class="added-company__name">Проект №1</div>
+                    <div class="added-company__desc">ОсОО “Стрела”</div>
+                    <div class="added-company__active">
+                      <input id="company1" type="radio" name="company" checked>
+                      <label for="company1">Выбрать по умолчанию для выставления счетов</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="added-company-wrap added-company-wrap_w50">
+                  <div class="added-company">
+                    <div class="added-company__name">Проект №2</div>
+                    <div class="added-company__desc">ОсОО “Мишень”</div>
+                    <div class="added-company__active">
+                      <input id="company2" type="radio" name="company">
+                      <label for="company2">Выбрать по умолчанию для выставления счетов</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="add-company-flex"> 
+                <div class="add-company-wrap add-company-wrap_w50">
+                  <div class="add-company add-company-js">
+                    <div class="add-company__icon"> 
+                      <div class="icon">
+                        <svg>
+                          <use xlink:href="sprite.svg#plus"> </use>
+                        </svg>
+                      </div>
+                    </div>
+                    <p>Добавить компанию      </p>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="section"> 
+              <div class="btn btn_sm btn_accent">Сохранить данные</div>
+            </div>
+          </div>
+          <div class="add-company-popup"> 
+            <div class="add-company-popup__wrap"> 
+              <h2>Добавление проекта</h2>
+              <div class="input-flex">
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input">
+                    <label class="input__label" for="project-name">Наименование проекта </label>
+                  </div>
+                  <div class="input__field-wrap">
+                    <input class="input__field" type="text" id="project-name" placeholder="Например: Алай Экспресс">
+                  </div>
+                </div>
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input-wrap">
+                    <div class="input">
+                      <div class="input__label">Страна проживания * </div>
+                      <div class="select select-trigger-js"> 
+                        <div class="select__selected">
+                          <div class="select__round-element"> <img src="" alt=""></div><span>Кыргызстан </span>
+                        </div>
+                        <div class="select__trigger">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#A8AAAE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </div>
+                        <div class="select__dropdown"> 
+                          <div class="select__option">
+                            <div class="select__round-element"> <img src="" alt=""></div>Кыргызстан
+                          </div>
+                          <div class="select__option">
+                            <div class="select__round-element"> <img src="" alt=""></div>Росиия
+                          </div>
+                          <div class="select__option">
+                            <div class="select__round-element"> <img src="" alt=""></div>Австрия
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input">
+                    <label class="input__label" for="legal-name">Наименование юридического лица</label>
+                  </div>
+                  <div class="input__field-wrap">
+                    <input class="input__field" type="text" id="legal-name" placeholder="Например: ОсОО “Стрела”">
+                  </div>
+                </div>
+                <div class="input-wrap input-wrap_w50">
+                  <div class="input-wrap">
+                    <div class="input">
+                      <div class="input__label">Основной адрес доставки</div>
+                      <div class="select select-trigger-js"> 
+                        <div class="select__selected"><span>Адрес 1 </span></div>
+                        <div class="select__trigger">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="#A8AAAE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                        </div>
+                        <div class="select__dropdown"> 
+                          <div class="select__option">Адрес 1</div>
+                          <div class="select__option">Адрес 2</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-wrap input-wrap_w50 input-wrap_modify">
+                  <div class="input-wrap">
+                    <div class="input">
+                      <label class="input__label" for="legal-name">ФИО лица по бух. вопросам</label>
+                    </div>
+                    <div class="input__field-wrap">
+                      <input class="input__field" type="text" id="legal-name" placeholder="Например: Орешкин Владислав Владимирович">
+                    </div>
+                  </div>
+                  <div class="input-wrap">
+                    <div class="input">
+                      <label class="input__label" for="legal-name">Адрес электронной почты</label>
+                    </div>
+                    <div class="input__field-wrap">
+                      <input class="input__field" type="text" id="legal-name" placeholder="Например: john@example.com">
+                    </div>
+                  </div>
+                  <div class="input-wrap">
+                    <div class="input input_phone">
+                      <label class="input__label" for="phone">Телефон контактного лица</label>
+                      <div class="input__field-wrap">
+                        <input class="input__field phone-js" name="phone" type="tel">
+                        <div class="output-success">Номер действительный! </div>
+                        <div class="output-error">Неверный номер. Повторите попытку.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-wrap input-wrap_w50 input-wrap_modify">
+                  <div class="input-wrap">
+                    <div class="input">
+                      <label class="input__label" for="legal-name">Реквизиты для счетов</label>
+                      <div class="input__field-wrap">
+                        <textarea class="input__field" name=""></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="drop-zone-flex">
+                <div class="drop-zone-wrap">
+                  <form class="drop-zone" action="#">
+                    <div class="drop-zone__icon"> 
+                      <div class="icon">
+                        <svg>
+                          <use xlink:href="sprite.svg#upload"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <p>Перетащите файлы сюда или нажмите, чтобы загрузить<span>Это всего лишь демонстрационная дропзона.</span></p>
+                    <div class="drop-zone__img">
+                      <input type="text"><img src="" alt="">
+                    </div>
+                    <div class="controls">
+                      <button class="change-btn btn_sm btn btn_accent">Изменить</button>
+                      <button class="delete-btn btn_sm btn btn_danger">Удалить</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.min.js"> </script>
+  </body>
+</html>
