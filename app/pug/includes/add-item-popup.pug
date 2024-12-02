@@ -1,7 +1,12 @@
-.add-company-popup 
-  .add-company-popup__wrap 
-    h2 Добавление проекта
-
+.add-item-popup 
+  .add-item-popup__wrap 
+    .add-item-popup__top
+      h2 Добавление проекта
+      .add-item-popup__close.add-item-close-js 
+        .icon
+          svg
+            use(xlink:href='sprite.svg#close')
+            
     .input-flex
       .input-wrap.input-wrap_w50
         .input
@@ -101,6 +106,7 @@
 
     .drop-zone-flex
       .drop-zone-wrap
+        .drop-zone-label Документы (регистрационные, реквизиты и пр.)
       
         form(action="#").drop-zone
           .drop-zone__icon 
@@ -119,4 +125,6 @@
             button.change-btn.btn_sm.btn.btn_accent Изменить
             button.delete-btn.btn_sm.btn.btn_danger Удалить
 
-      
+    .add-item-popup__btn-controls
+      .btn.btn_sm.btn_accent Сохранить изменения
+      .btn.btn_sm.btn_danger Удалить компанию

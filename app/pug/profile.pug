@@ -210,6 +210,7 @@ block main
 
             .drop-zone-flex
               .drop-zone-wrap.drop-zone-wrap_w50
+                .drop-zone-label Передняя часть ID
                 form(action="#").drop-zone
                   .drop-zone__icon 
                     .icon
@@ -228,6 +229,7 @@ block main
                     button.delete-btn.btn_sm.btn.btn_danger Удалить
 
               .drop-zone-wrap.drop-zone-wrap_w50
+                .drop-zone-label Задняя часть ID
                 form(action="#").drop-zone
                   .drop-zone__icon 
                     .icon
@@ -251,26 +253,26 @@ block main
               | Здесь Вы можете добавить компанию/проект. Вы можете выбрать какую компанию использовать для
               br
               | выставления счетов по коммерческим партиям, при оформлении посылки или груза.
-            .added-company-flex
-              div(class="added-company-wrap added-company-wrap_w50")
-                .added-company.active
-                  div(class="added-company__name") Проект №1
-                  div(class="added-company__desc") ОсОО “Стрела”
-                  div(class="added-company__active")
+            .added-item-flex
+              div(class="added-item-wrap added-item-wrap_w50")
+                .added-item.active
+                  div(class="added-item__name") Проект №1
+                  div(class="added-item__desc") ОсОО “Стрела”
+                  div(class="added-item__active")
                     input#company1(type="radio", name="company" checked)
                     label(for="company1") Выбрать по умолчанию для выставления счетов
-              div(class="added-company-wrap added-company-wrap_w50")
-                .added-company
-                  div(class="added-company__name") Проект №2
-                  div(class="added-company__desc") ОсОО “Мишень”
-                  div(class="added-company__active")
+              div(class="added-item-wrap added-item-wrap_w50")
+                .added-item
+                  div(class="added-item__name") Проект №2
+                  div(class="added-item__desc") ОсОО “Мишень”
+                  div(class="added-item__active")
                     input#company2(type="radio", name="company")
                     label(for="company2") Выбрать по умолчанию для выставления счетов
 
              
             .add-company-flex 
               .add-company-wrap.add-company-wrap_w50
-                .add-company.add-company-js
+                .add-company.add-item-js
                   .add-company__icon 
                     .icon
                       svg
@@ -281,7 +283,7 @@ block main
           .section 
             .btn.btn_sm.btn_accent Сохранить данные
 
-        include includes/add-company-popup
+        include includes/add-item-popup
               
 
 

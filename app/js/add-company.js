@@ -20,3 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+$('.add-item-js').on('click', function () {
+  // Рассчитать ширину .content-inner
+  const contentInnerWidth = $('.content-inner').outerWidth();
+
+  // Присвоить ширину элементу .add-item-popup
+  $('.add-item-popup').css('max-width', contentInnerWidth);
+
+  // Добавить классы
+  $('body').addClass('no-scroll');
+  $('.add-item-popup').addClass('active');
+});
+
+$('.add-item-close-js').on('click', function () {
+  $('body').removeClass('no-scroll');
+  $('.add-item-popup').removeClass('active');
+});
+

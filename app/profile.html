@@ -270,6 +270,7 @@
               </div>
               <div class="drop-zone-flex">
                 <div class="drop-zone-wrap drop-zone-wrap_w50">
+                  <div class="drop-zone-label">Передняя часть ID</div>
                   <form class="drop-zone" action="#">
                     <div class="drop-zone__icon"> 
                       <div class="icon">
@@ -289,6 +290,7 @@
                   </form>
                 </div>
                 <div class="drop-zone-wrap drop-zone-wrap_w50">
+                  <div class="drop-zone-label">Задняя часть ID</div>
                   <form class="drop-zone" action="#">
                     <div class="drop-zone__icon"> 
                       <div class="icon">
@@ -312,22 +314,22 @@
             <form class="section section_separate" action="#">
               <h3>Комании и проекты</h3>
               <div class="sub-title">Здесь Вы можете добавить компанию/проект. Вы можете выбрать какую компанию использовать для<br>выставления счетов по коммерческим партиям, при оформлении посылки или груза.</div>
-              <div class="added-company-flex">
-                <div class="added-company-wrap added-company-wrap_w50">
-                  <div class="added-company active">
-                    <div class="added-company__name">Проект №1</div>
-                    <div class="added-company__desc">ОсОО “Стрела”</div>
-                    <div class="added-company__active">
+              <div class="added-item-flex">
+                <div class="added-item-wrap added-item-wrap_w50">
+                  <div class="added-item active">
+                    <div class="added-item__name">Проект №1</div>
+                    <div class="added-item__desc">ОсОО “Стрела”</div>
+                    <div class="added-item__active">
                       <input id="company1" type="radio" name="company" checked>
                       <label for="company1">Выбрать по умолчанию для выставления счетов</label>
                     </div>
                   </div>
                 </div>
-                <div class="added-company-wrap added-company-wrap_w50">
-                  <div class="added-company">
-                    <div class="added-company__name">Проект №2</div>
-                    <div class="added-company__desc">ОсОО “Мишень”</div>
-                    <div class="added-company__active">
+                <div class="added-item-wrap added-item-wrap_w50">
+                  <div class="added-item">
+                    <div class="added-item__name">Проект №2</div>
+                    <div class="added-item__desc">ОсОО “Мишень”</div>
+                    <div class="added-item__active">
                       <input id="company2" type="radio" name="company">
                       <label for="company2">Выбрать по умолчанию для выставления счетов</label>
                     </div>
@@ -336,7 +338,7 @@
               </div>
               <div class="add-company-flex"> 
                 <div class="add-company-wrap add-company-wrap_w50">
-                  <div class="add-company add-company-js">
+                  <div class="add-company add-item-js">
                     <div class="add-company__icon"> 
                       <div class="icon">
                         <svg>
@@ -353,9 +355,18 @@
               <div class="btn btn_sm btn_accent">Сохранить данные</div>
             </div>
           </div>
-          <div class="add-company-popup"> 
-            <div class="add-company-popup__wrap"> 
-              <h2>Добавление проекта</h2>
+          <div class="add-item-popup"> 
+            <div class="add-item-popup__wrap"> 
+              <div class="add-item-popup__top">
+                <h2>Добавление проекта</h2>
+                <div class="add-item-popup__close add-item-close-js"> 
+                  <div class="icon">
+                    <svg>
+                      <use xlink:href="sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
               <div class="input-flex">
                 <div class="input-wrap input-wrap_w50">
                   <div class="input">
@@ -461,6 +472,7 @@
               </div>
               <div class="drop-zone-flex">
                 <div class="drop-zone-wrap">
+                  <div class="drop-zone-label">Документы (регистрационные, реквизиты и пр.)</div>
                   <form class="drop-zone" action="#">
                     <div class="drop-zone__icon"> 
                       <div class="icon">
@@ -479,6 +491,10 @@
                     </div>
                   </form>
                 </div>
+              </div>
+              <div class="add-item-popup__btn-controls">
+                <div class="btn btn_sm btn_accent">Сохранить изменения</div>
+                <div class="btn btn_sm btn_danger">Удалить компанию</div>
               </div>
             </div>
           </div>
